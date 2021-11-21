@@ -1,0 +1,643 @@
+{
+  "contractName": "TradePlatform",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.10+commit.fc410830\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/TradePlatform.sol\":\"TradePlatform\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/TradePlatform.sol\":{\"keccak256\":\"0x107751a656871a40929d2444abcdf0e1643dd99a9b852d8ac2f8bc2e01e00cc0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1b462df068fd5a5df47363464923120b8fa7e0ba11f11d9e670db4e5b00b0233\",\"dweb:/ipfs/QmfUdtZipRgVscSnJQMVxWtp21bNSv9wQp21jGL4TAUe4o\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220e56b22d408af85c5764cc67e0fb5a305c2d79a35d77475f993e8cd12b43222cf64736f6c634300080a0033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220e56b22d408af85c5764cc67e0fb5a305c2d79a35d77475f993e8cd12b43222cf64736f6c634300080a0033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "57:966:12:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "57:966:12:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract TradePlatform {\n//    uint256[] tokenIds;\n//    address[] owners;\n//    uint256[] prices;\n//    uint256 defaultTokenPrice = 1;\n//    mapping(uint256 => address) tokenOwnerMapping;\n//    mapping(uint256 => uint256) tokenPriceMapping;\n\n    // <items mapping>\n    mapping (uint => Item) internal items;\n\n    // <enum State: ForSale, Sold>\n    enum State { ForSale, Sold}\n\n    struct Item {\n        address nft;\n        uint id;\n        uint price;\n        State state;\n        address payable seller;\n        address payable buyer;\n    }\n\n    // User can list any NFT he/she owns with a given price.\n//    function listItem(uint _id, uint _price ) public returns (bool) {\n//\n//    }\n//\n//    // If any other uses are interested, they can buy it.\n//    function buyItem(uint id) public payable {\n//\n//    }\n//\n//    // fetch the given sized available items.\n//    function fetchItems(uint pageSize)\n//        public view returns\n//    (Item[] items) {\n//    }\n}",
+  "sourcePath": "/Users/yuzhu/git/self/blockchain-developer-bootcamp-final-project/contracts/TradePlatform.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/TradePlatform.sol",
+    "exportedSymbols": {
+      "TradePlatform": [
+        2111
+      ]
+    },
+    "id": 2112,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2088,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:12"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "TradePlatform",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 2111,
+        "linearizedBaseContracts": [
+          2111
+        ],
+        "name": "TradePlatform",
+        "nameLocation": "66:13:12",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 2093,
+            "mutability": "mutable",
+            "name": "items",
+            "nameLocation": "359:5:12",
+            "nodeType": "VariableDeclaration",
+            "scope": 2111,
+            "src": "327:37:12",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Item_$2110_storage_$",
+              "typeString": "mapping(uint256 => struct TradePlatform.Item)"
+            },
+            "typeName": {
+              "id": 2092,
+              "keyType": {
+                "id": 2089,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "336:4:12",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "327:22:12",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Item_$2110_storage_$",
+                "typeString": "mapping(uint256 => struct TradePlatform.Item)"
+              },
+              "valueType": {
+                "id": 2091,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 2090,
+                  "name": "Item",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 2110,
+                  "src": "344:4:12"
+                },
+                "referencedDeclaration": 2110,
+                "src": "344:4:12",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Item_$2110_storage_ptr",
+                  "typeString": "struct TradePlatform.Item"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "TradePlatform.State",
+            "id": 2096,
+            "members": [
+              {
+                "id": 2094,
+                "name": "ForSale",
+                "nameLocation": "419:7:12",
+                "nodeType": "EnumValue",
+                "src": "419:7:12"
+              },
+              {
+                "id": 2095,
+                "name": "Sold",
+                "nameLocation": "428:4:12",
+                "nodeType": "EnumValue",
+                "src": "428:4:12"
+              }
+            ],
+            "name": "State",
+            "nameLocation": "411:5:12",
+            "nodeType": "EnumDefinition",
+            "src": "406:27:12"
+          },
+          {
+            "canonicalName": "TradePlatform.Item",
+            "id": 2110,
+            "members": [
+              {
+                "constant": false,
+                "id": 2098,
+                "mutability": "mutable",
+                "name": "nft",
+                "nameLocation": "469:3:12",
+                "nodeType": "VariableDeclaration",
+                "scope": 2110,
+                "src": "461:11:12",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 2097,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "461:7:12",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2100,
+                "mutability": "mutable",
+                "name": "id",
+                "nameLocation": "487:2:12",
+                "nodeType": "VariableDeclaration",
+                "scope": 2110,
+                "src": "482:7:12",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2099,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "482:4:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2102,
+                "mutability": "mutable",
+                "name": "price",
+                "nameLocation": "504:5:12",
+                "nodeType": "VariableDeclaration",
+                "scope": 2110,
+                "src": "499:10:12",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2101,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "499:4:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2105,
+                "mutability": "mutable",
+                "name": "state",
+                "nameLocation": "525:5:12",
+                "nodeType": "VariableDeclaration",
+                "scope": 2110,
+                "src": "519:11:12",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_State_$2096",
+                  "typeString": "enum TradePlatform.State"
+                },
+                "typeName": {
+                  "id": 2104,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 2103,
+                    "name": "State",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 2096,
+                    "src": "519:5:12"
+                  },
+                  "referencedDeclaration": 2096,
+                  "src": "519:5:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_State_$2096",
+                    "typeString": "enum TradePlatform.State"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2107,
+                "mutability": "mutable",
+                "name": "seller",
+                "nameLocation": "556:6:12",
+                "nodeType": "VariableDeclaration",
+                "scope": 2110,
+                "src": "540:22:12",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address_payable",
+                  "typeString": "address payable"
+                },
+                "typeName": {
+                  "id": 2106,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "540:15:12",
+                  "stateMutability": "payable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2109,
+                "mutability": "mutable",
+                "name": "buyer",
+                "nameLocation": "588:5:12",
+                "nodeType": "VariableDeclaration",
+                "scope": 2110,
+                "src": "572:21:12",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address_payable",
+                  "typeString": "address payable"
+                },
+                "typeName": {
+                  "id": 2108,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "572:15:12",
+                  "stateMutability": "payable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Item",
+            "nameLocation": "446:4:12",
+            "nodeType": "StructDefinition",
+            "scope": 2111,
+            "src": "439:161:12",
+            "visibility": "public"
+          }
+        ],
+        "scope": 2112,
+        "src": "57:966:12",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:991:12"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/TradePlatform.sol",
+    "exportedSymbols": {
+      "TradePlatform": [
+        2111
+      ]
+    },
+    "id": 2112,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2088,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:12"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "TradePlatform",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 2111,
+        "linearizedBaseContracts": [
+          2111
+        ],
+        "name": "TradePlatform",
+        "nameLocation": "66:13:12",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 2093,
+            "mutability": "mutable",
+            "name": "items",
+            "nameLocation": "359:5:12",
+            "nodeType": "VariableDeclaration",
+            "scope": 2111,
+            "src": "327:37:12",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Item_$2110_storage_$",
+              "typeString": "mapping(uint256 => struct TradePlatform.Item)"
+            },
+            "typeName": {
+              "id": 2092,
+              "keyType": {
+                "id": 2089,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "336:4:12",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "327:22:12",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Item_$2110_storage_$",
+                "typeString": "mapping(uint256 => struct TradePlatform.Item)"
+              },
+              "valueType": {
+                "id": 2091,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 2090,
+                  "name": "Item",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 2110,
+                  "src": "344:4:12"
+                },
+                "referencedDeclaration": 2110,
+                "src": "344:4:12",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Item_$2110_storage_ptr",
+                  "typeString": "struct TradePlatform.Item"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "TradePlatform.State",
+            "id": 2096,
+            "members": [
+              {
+                "id": 2094,
+                "name": "ForSale",
+                "nameLocation": "419:7:12",
+                "nodeType": "EnumValue",
+                "src": "419:7:12"
+              },
+              {
+                "id": 2095,
+                "name": "Sold",
+                "nameLocation": "428:4:12",
+                "nodeType": "EnumValue",
+                "src": "428:4:12"
+              }
+            ],
+            "name": "State",
+            "nameLocation": "411:5:12",
+            "nodeType": "EnumDefinition",
+            "src": "406:27:12"
+          },
+          {
+            "canonicalName": "TradePlatform.Item",
+            "id": 2110,
+            "members": [
+              {
+                "constant": false,
+                "id": 2098,
+                "mutability": "mutable",
+                "name": "nft",
+                "nameLocation": "469:3:12",
+                "nodeType": "VariableDeclaration",
+                "scope": 2110,
+                "src": "461:11:12",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 2097,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "461:7:12",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2100,
+                "mutability": "mutable",
+                "name": "id",
+                "nameLocation": "487:2:12",
+                "nodeType": "VariableDeclaration",
+                "scope": 2110,
+                "src": "482:7:12",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2099,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "482:4:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2102,
+                "mutability": "mutable",
+                "name": "price",
+                "nameLocation": "504:5:12",
+                "nodeType": "VariableDeclaration",
+                "scope": 2110,
+                "src": "499:10:12",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2101,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "499:4:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2105,
+                "mutability": "mutable",
+                "name": "state",
+                "nameLocation": "525:5:12",
+                "nodeType": "VariableDeclaration",
+                "scope": 2110,
+                "src": "519:11:12",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_State_$2096",
+                  "typeString": "enum TradePlatform.State"
+                },
+                "typeName": {
+                  "id": 2104,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 2103,
+                    "name": "State",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 2096,
+                    "src": "519:5:12"
+                  },
+                  "referencedDeclaration": 2096,
+                  "src": "519:5:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_State_$2096",
+                    "typeString": "enum TradePlatform.State"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2107,
+                "mutability": "mutable",
+                "name": "seller",
+                "nameLocation": "556:6:12",
+                "nodeType": "VariableDeclaration",
+                "scope": 2110,
+                "src": "540:22:12",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address_payable",
+                  "typeString": "address payable"
+                },
+                "typeName": {
+                  "id": 2106,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "540:15:12",
+                  "stateMutability": "payable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2109,
+                "mutability": "mutable",
+                "name": "buyer",
+                "nameLocation": "588:5:12",
+                "nodeType": "VariableDeclaration",
+                "scope": 2110,
+                "src": "572:21:12",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address_payable",
+                  "typeString": "address payable"
+                },
+                "typeName": {
+                  "id": 2108,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "572:15:12",
+                  "stateMutability": "payable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Item",
+            "nameLocation": "446:4:12",
+            "nodeType": "StructDefinition",
+            "scope": 2111,
+            "src": "439:161:12",
+            "visibility": "public"
+          }
+        ],
+        "scope": 2112,
+        "src": "57:966:12",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:991:12"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.10+commit.fc410830.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-11-15T07:13:21.109Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

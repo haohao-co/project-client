@@ -1,0 +1,6 @@
+.idea_modules/
+.idea
+node_modules
+bin_output
+logs
+truffle-config.js

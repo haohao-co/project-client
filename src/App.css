@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-child {
+  flex: 1;
+  border: 2px solid gray;
+}  
+
+.flex-child:first-child {
+  margin-right: 0px;
+  padding: 30px;
+} 
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
